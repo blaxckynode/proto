@@ -1,6 +1,6 @@
 import memojiImage from "@/assets/images/memoji-computer.png"
 import Image from "next/image"
-import ArrowDown from "@/assets/icons/arrow-down.svg"
+import ArrowDown from "@/assets/icons/tool.svg"
 import grainImage from "@/assets/images/grain.jpg"
 import StarIcon from "@/assets/icons/star.svg"
 import SparkleIcon from "@/assets/icons/sparkle.svg"
@@ -104,10 +104,10 @@ export const HeroSection = () => {
       <div className="container">
         <HomePage
           title={"Hi, Welcome .."}
-          subtitle1={"Let`s Build Exceptional"}
-          subtitle2={"User Experience"}
+          subtitle1={"Non-custodial Staking Provider"}
+          subtitle2={"Node Validator"}
           description={
-            "Design with precision, innovate with purpose, and build a future that endures."
+            "We are committed, enthusiastic, and thrifty in operating nodes for blockchain projects, always up to date with industry developments, and eager to contribute to the advancement of blockchain technology through efficient node operations."
           }
         />
         <Stats />
@@ -139,13 +139,13 @@ export const HeroSection = () => {
             backgroundColor="#22c55e"
             onClick={() => {
               window.open(
-                "https://www.linkedin.com/in/galihmahendraw/",
+                "https://services.jhonswg.com",
                 "_blank"
               )
             }}
           >
             {/* <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl"> */}
-            <span className="font-semibold">Download CV</span>
+            <span className="font-semibold">Our Services </span>
             <span>
               <ArrowDown className="size-4" />
             </span>
@@ -155,13 +155,13 @@ export const HeroSection = () => {
             backgroundColor="#fff"
             onClick={() => {
               window.open(
-                "https://www.linkedin.com/in/galihmahendraw/",
+                "https://explorer.jhonswg.com",
                 "_blank"
               )
             }}
           >
             <span>👋</span>
-            <span className="font-semibold">Let`s Connect</span>
+            <span className="font-semibold">Stake with Us !</span>
           </Rounded>
           {/* <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
             

@@ -9,13 +9,15 @@ export default function Magnetic({ children }: MagneticProps) {
   const magnetic = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
-    console.log(children)
+    const currentMagnetic = magnetic.current; // Salin ke variabel lokal
 
-    const xTo = gsap.quickTo(magnetic.current, "x", {
+    if (!currentMagnetic) return; // Pastikan elemen ada
+
+    const xTo = gsap.quickTo(currentMagnetic, "x", {
       duration: 1,
       ease: "elastic.out(1, 0.3)",
     })
-    const yTo = gsap.quickTo(magnetic.current, "y", {
+    const yTo = gsap.quickTo(currentMagnetic, "y", {
       duration: 1,
       ease: "elastic.out(1, 0.3)",
     })
@@ -23,7 +25,7 @@ export default function Magnetic({ children }: MagneticProps) {
     const handleMouseMove = (e: MouseEvent) => {
       const { clientX, clientY } = e
       const { height, width, left, top } =
-        magnetic.current!.getBoundingClientRect()
+        currentMagnetic.getBoundingClientRect()
       const x = clientX - (left + width / 2)
       const y = clientY - (top + height / 2)
       xTo(x * 0.35)
@@ -35,12 +37,14 @@ export default function Magnetic({ children }: MagneticProps) {
       yTo(0)
     }
 
-    magnetic.current?.addEventListener("mousemove", handleMouseMove)
-    magnetic.current?.addEventListener("mouseleave", handleMouseLeave)
+    // Tambahkan event listener pada currentMagnetic
+    currentMagnetic.addEventListener("mousemove", handleMouseMove)
+    currentMagnetic.addEventListener("mouseleave", handleMouseLeave)
 
+    // Cleanup function
     return () => {
-      magnetic.current?.removeEventListener("mousemove", handleMouseMove)
-      magnetic.current?.removeEventListener("mouseleave", handleMouseLeave)
+      currentMagnetic.removeEventListener("mousemove", handleMouseMove)
+      currentMagnetic.removeEventListener("mouseleave", handleMouseLeave)
     }
   }, [children])
 

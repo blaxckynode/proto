@@ -3,6 +3,7 @@ import { Fragment, use } from "react"
 import { twMerge } from "tailwind-merge"
 import { AnimatedText } from "@/hooks/gsap"
 
+
 export const HomePage = ({
   title,
   subtitle1,
@@ -32,7 +33,7 @@ export const HomePage = ({
                 usePhoto && "md:text-left"
               )}
             >
-              <span className="text-lg md:text-xl">{title}</span>
+              {/* <span className="text-lg md:text-xl">{title}</span> */}
               <h1 className="h1 mb-6 text-3xl md:text-5xl leading-[1.1] font-semibold">
                 {subtitle1} <br />{" "}
                 <span className="text-accent">{subtitle2}</span>
@@ -51,7 +52,7 @@ export const HomePage = ({
             <div className="order-1 md:order-none mb-8 md:mb-0">
               <Fragment>
                 <Photo />
-                <div className="text-center">
+                {/* <div className="text-center">
                   <div className=" bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
                     <div className="bg-green-500 size-2.5 rounded-full relative">
                       <div className="bg-green-500 absolute inset-0 rounded-full animate-ping-large"></div>
@@ -60,7 +61,7 @@ export const HomePage = ({
                       Available for new project
                     </div>
                   </div>
-                </div>
+                </div> */}
               </Fragment>
             </div>
           )}

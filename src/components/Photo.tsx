@@ -1,7 +1,7 @@
 "use client"
 import { motion } from "framer-motion"
 import Image from "next/image"
-import ProfilePhoto from "@/assets/images/profile/photo.png"
+import ProfilePhoto from "@/assets/images/profile/fix.png"
 
 export const Photo = () => {
   return (
@@ -19,7 +19,7 @@ export const Photo = () => {
             opacity: 1,
             transition: { delay: 5, duration: 0.4, ease: "easeInOut" },
           }}
-          className="w-[298px] h-[298px] xl:w-[498px] sl:h-[498px] mix-blend-lighten"
+          className="w-[398px] h-[398px] xl:w-[598px] xl:h-[598px] mix-blend-lighten"
         >
           <Image
             src={ProfilePhoto}

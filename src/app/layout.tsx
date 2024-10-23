@@ -15,8 +15,8 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "Created with the help of Frontend Tribe",
+  title: "Jhonswg - Stake and Earn with Us",
+  description: "PoS Node Validator",
 }
 
 export default function RootLayout({
@@ -26,6 +26,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Tambahkan favicon di sini */}
+        <link rel="icon" href="assets/images/profile/fix.png" type="image/png" />
+        {/* Jika menggunakan format lain seperti PNG */}
+        {/* <link rel="icon" href="/favicon.png" type="image/png" /> */}
+      </head>
       <body
         className={twMerge(
           inter.variable,
